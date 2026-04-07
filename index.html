@@ -425,8 +425,8 @@
 
     .drinks-showcase {
       position: relative;
-      width: 420px;
-      height: 420px;
+      width: 500px;
+      height: 550px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -448,36 +448,41 @@
       transform: scale(1.12) translateY(-10px) !important;
     }
 
-    /* Center drink — tallest, front */
+    /* Center drink — biggest, front, truly centered */
     .drink-center {
       z-index: 4;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       animation: drinkFloat1 4s ease-in-out infinite;
     }
     .drink-center img {
-      height: 440px;
+      height: 520px;
     }
     /* Left drink — behind left */
     .drink-left {
       z-index: 3;
-      left: -30px;
-      top: 30px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-40%);
       animation: drinkFloat2 4.5s ease-in-out infinite;
     }
-    .drink-left img { height: 260px; }
+    .drink-left img { height: 280px; }
     /* Right drink — behind right */
     .drink-right {
       z-index: 3;
-      right: -30px;
-      top: 25px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-40%);
       animation: drinkFloat3 5s ease-in-out infinite;
     }
-    .drink-right img { height: 270px; }
+    .drink-right img { height: 290px; }
 
     /* Glow behind drinks */
     .drinks-glow {
       position: absolute;
-      width: 350px;
-      height: 350px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, rgba(0,229,204,0.4) 0%, rgba(198,255,0,0.2) 40%, transparent 70%);
       border-radius: 50%;
       z-index: 1;
@@ -1206,13 +1211,13 @@
       }
       .hero-btns { justify-content: center; }
       .hero-visual { margin-top: 20px; order: -1; }
-      .drinks-showcase { width: 300px; height: 320px; }
-      .drink-float img { height: 200px !important; }
-      .drink-center img { height: 300px !important; }
-      .drink-left img { height: 200px !important; }
-      .drink-right img { height: 210px !important; }
-      .drink-left { left: -15px; top: 25px; }
-      .drink-right { right: -15px; top: 20px; }
+      .drinks-showcase { width: 320px; height: 400px; }
+      .drink-float img { height: 180px !important; }
+      .drink-center img { height: 350px !important; }
+      .drink-left img { height: 180px !important; }
+      .drink-right img { height: 185px !important; }
+      .drink-left { left: -10px; }
+      .drink-right { right: -10px; }
       .drinks-glow { width: 250px; height: 250px; }
       .product-badge { font-size: 0.7rem; padding: 6px 10px; }
 
